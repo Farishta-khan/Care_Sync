@@ -47,7 +47,7 @@ class User extends Authenticatable
             return asset('storage/' . $this->profile_photo_path);
         }
 
-        return 'https://ui-avatars.com/api/?name=' . urlencode($this->name) . '&background=10b981&color=ffffff&rounded=true';
+        return 'https://ui-avatars.com/api/?name=' . urlencode($this->name) . '&background=6366f1&color=ffffff&rounded=true';
     }
 
     public function timeSlots()
