@@ -40,8 +40,8 @@
             </div>
 
             @if(session('success'))
-            <div class="bg-emerald-50 border-l-4 border-emerald-500 text-emerald-700 p-4 mb-8 rounded-r-xl shadow-sm flex items-center" role="alert">
-                <svg class="w-5 h-5 mr-3 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            <div class="bg-indigo-50 border-l-4 border-indigo-400 text-indigo-700 p-4 mb-8 rounded-r-xl shadow-sm flex items-center" role="alert">
+                <svg class="w-5 h-5 mr-3 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                 <p class="font-medium">{{ session('success') }}</p>
             </div>
             @endif
@@ -93,7 +93,7 @@
                                         </td>
                                         <td class="px-6 py-5 whitespace-nowrap">
                                             <span class="px-3 py-1 inline-flex text-xs leading-5 font-bold rounded-full shadow-sm 
-                                                @if($appointment->status === 'approved') bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400
+                                                @if($appointment->status === 'approved') bg-indigo-50 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-400
                                                 @elseif($appointment->status === 'pending') bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400
                                                 @else bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400 @endif">
                                                 {{ ucfirst($appointment->status) }}

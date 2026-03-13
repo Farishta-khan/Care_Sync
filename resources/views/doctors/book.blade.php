@@ -8,8 +8,8 @@
         <div class="py-12 relative overflow-hidden">
 
         <!-- Background Blur -->
-        <div class="absolute -top-20 -right-20 w-[500px] h-[500px] rounded-full bg-emerald-400/10 blur-[100px] -z-10"></div>
-        <div class="absolute -bottom-20 -left-20 w-[600px] h-[600px] rounded-full bg-emerald-400/10 blur-[120px] -z-10"></div>
+        <div class="absolute -top-20 -right-20 w-[500px] h-[500px] rounded-full bg-indigo-300/10 blur-[100px] -z-10"></div>
+        <div class="absolute -bottom-20 -left-20 w-[600px] h-[600px] rounded-full bg-indigo-300/10 blur-[120px] -z-10"></div>
 
         <!-- Flatpickr CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -18,14 +18,14 @@
         <style>
         /* Highlight only available dates */
         .flatpickr-day.available {
-            background:#22C55E !important;  /* emerald green */
+            background:#6366f1 !important;  /* indigo-500 */
             color:white !important;
             border-radius:8px !important;
             font-weight:600;
             transition: all 0.2s ease-in-out;
         }
         .flatpickr-day.available:hover {
-            background:#16A34A !important;
+            background:#4f46e5 !important;  /* indigo-600 */
             transform: scale(1.1);
         }
         .slot-btn {
@@ -63,13 +63,13 @@
 
         <div class="p-8 text-center">
 
-        <img src="{{ $doctor->avatar_url }}" alt="{{ $doctor->name }}" class="h-28 w-28 mx-auto rounded-full object-cover shadow-lg border-4 border-emerald-200 mb-6" />
+        <img src="{{ $doctor->avatar_url }}" alt="{{ $doctor->name }}" class="h-28 w-28 mx-auto rounded-full object-cover shadow-lg border-4 border-indigo-300 mb-6" />
 
         <h3 class="text-2xl font-bold text-slate-900 dark:text-white">
         {{ $doctor->name }}
         </h3>
 
-        <p class="text-sm font-medium text-emerald-600 dark:text-emerald-400 mt-1 mb-6">
+        <p class="text-sm font-medium text-indigo-500 dark:text-indigo-400 mt-1 mb-6">
         {{ $doctor->doctorProfile->specialty ?? 'General' }}
         </p>
 
@@ -142,13 +142,13 @@
         <div class="mb-10">
         <label class="block text-sm font-semibold mb-4">Available Time Slots</label>
         <div id="slots-container" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 bg-slate-50 p-6 rounded-2xl"></div>
-        <div id="selected-slot-display" class="mt-4 p-4 bg-emerald-50 rounded-xl hidden">
+        <div id="selected-slot-display" class="mt-4 p-4 bg-indigo-50 rounded-xl hidden">
         <p class="text-sm font-bold" id="slot-text"></p>
         </div>
         </div>
 
         <button type="submit" id="submit-btn" disabled
-        class="w-full py-4 rounded-xl text-white font-bold bg-gradient-to-r from-emerald-600 to-emerald-700 disabled:opacity-50">
+        class="w-full py-4 rounded-xl text-white font-bold bg-gradient-to-r from-indigo-500 to-indigo-600 disabled:opacity-50">
         Confirm Booking
         </button>
 

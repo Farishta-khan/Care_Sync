@@ -7,8 +7,8 @@
 
     <div class="py-12 relative overflow-hidden">
         <!-- Decorative blobs -->
-        <div class="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-emerald-400/10 blur-[100px] pointer-events-none -z-10"></div>
-        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-emerald-500/10 blur-[120px] pointer-events-none -z-10"></div>
+        <div class="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-indigo-300/10 blur-[100px] pointer-events-none -z-10"></div>
+        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-indigo-400/10 blur-[120px] pointer-events-none -z-10"></div>
 
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -20,10 +20,10 @@
                     <div class="p-8 flex flex-col h-full relative z-10">
                         <div class="flex items-start justify-between mb-6">
                             <div class="flex items-center space-x-4">
-                                <img src="{{ $doctor->avatar_url }}" alt="{{ $doctor->name }}" class="h-16 w-16 object-cover rounded-full shadow-md border-2 border-emerald-100" />
+                                <img src="{{ $doctor->avatar_url }}" alt="{{ $doctor->name }}" class="h-16 w-16 object-cover rounded-full shadow-md border-2 border-indigo-200" />
                                 <div>
-                                    <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 transition-colors">{{ $doctor->name }}</h3>
-                                    <p class="text-sm font-medium text-emerald-600 dark:text-emerald-300">{{ $doctor->doctorProfile->specialty ?? 'General Practitioner' }}</p>
+                                    <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-500 transition-colors">{{ $doctor->name }}</h3>
+                                    <p class="text-sm font-medium text-indigo-500 dark:text-indigo-300">{{ $doctor->doctorProfile->specialty ?? 'General Practitioner' }}</p>
                                 </div>
                             </div>
                         </div>
@@ -42,7 +42,7 @@
                             </div>
                         </div>
 
-                        <a href="{{ route('doctors.book', $doctor->id) }}" class="block w-full text-center bg-emerald-600 text-white hover:bg-emerald-700 font-bold py-3.5 px-4 rounded-xl transition-all duration-300 mt-auto shadow-sm hover:-translate-y-0.5 hover:shadow-md">
+                        <a href="{{ route('doctors.book', $doctor->id) }}" class="block w-full text-center bg-indigo-500 text-white hover:bg-indigo-600 font-bold py-3.5 px-4 rounded-xl transition-all duration-300 mt-auto shadow-sm hover:-translate-y-0.5 hover:shadow-md">
                             Book Appointment
                         </a>
                     </div>

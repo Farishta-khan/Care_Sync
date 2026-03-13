@@ -25,29 +25,29 @@
     <div class="py-12 min-h-[80vh] relative overflow-hidden">
 
         <!-- Background decoration -->
-    <div class="absolute top-20 left-10 w-72 h-72 rounded-full bg-emerald-400/10 blur-[100px] -z-10"></div>
+    <div class="absolute top-20 left-10 w-72 h-72 rounded-full bg-indigo-300/10 blur-[100px] -z-10"></div>
     <div class="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-blue-400/10 blur-[120px] -z-10"></div>
 
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-3xl overflow-hidden shadow-xl shadow-emerald-500/20 mb-8 relative">
+            <div class="bg-gradient-to-r from-indigo-500 to-purple-500 rounded-3xl overflow-hidden shadow-xl shadow-indigo-500/20 mb-8 relative">
                 <div class="absolute inset-0 bg-white/10 dark:bg-black/10 backdrop-blur-sm"></div>
                 <div class="relative p-8 sm:p-10 flex flex-col sm:flex-row justify-between items-center text-white z-10">
                     <div class="mb-6 sm:mb-0 text-center sm:text-left flex items-center gap-4">
                         <img src="{{ auth()->user()->avatar_url }}" alt="{{ auth()->user()->name }}" class="h-16 w-16 rounded-full object-cover border-2 border-white" />
                         <div>
                             <h3 class="text-3xl font-extrabold mb-2">Welcome, Dr. {{ explode(' ', Auth::user()->name)[0] }} 🩺</h3>
-                            <p class="text-emerald-50 dark:text-emerald-100">Here is your schedule and pending appointment requests.</p>
+                            <p class="text-indigo-50 dark:text-indigo-100">Here is your schedule and pending appointment requests.</p>
                         </div>
                     </div>
                     <div class="flex items-center space-x-4 bg-white/20 px-6 py-3 rounded-2xl backdrop-blur-md">
                         <div class="text-center">
                             <div class="text-2xl font-bold">{{ $appointments->where('status', 'pending')->count() }}</div>
-                            <div class="text-xs font-semibold uppercase tracking-wider text-emerald-100">Pending</div>
+                            <div class="text-xs font-semibold uppercase tracking-wider text-indigo-50">Pending</div>
                         </div>
                         <div class="w-px h-10 bg-white/30"></div>
                         <div class="text-center">
                             <div class="text-2xl font-bold">{{ $appointments->where('status', 'approved')->count() }}</div>
-                            <div class="text-xs font-semibold uppercase tracking-wider text-emerald-100">Approved</div>
+                            <div class="text-xs font-semibold uppercase tracking-wider text-indigo-50">Approved</div>
                         </div>
                     </div>
                 </div>
@@ -113,7 +113,7 @@
                                                 $statusClass = 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400';
 
                                                 if ($appointment->status === 'approved') {
-                                                    $statusClass = 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400';
+                                                    $statusClass = 'bg-indigo-50 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-400';
                                                 } elseif ($appointment->status === 'pending') {
                                                     $statusClass = 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400';
                                                 }
@@ -126,7 +126,7 @@
                                             <td class="px-6 py-5 whitespace-nowrap text-right text-sm font-medium">
                                                 @if($appointment->status === 'pending')
                                                     <div class="flex items-center justify-end space-x-3">
-                                                        <button onclick="updateAppointmentStatus({{ $appointment->id }}, 'approve')" class="flex items-center justify-center w-8 h-8 rounded-full bg-emerald-50 text-emerald-600 hover:bg-emerald-100 dark:bg-emerald-900/30 dark:text-emerald-400 dark:hover:bg-emerald-900/50 transition-colors tooltip" title="Approve">
+                                                        <button onclick="updateAppointmentStatus({{ $appointment->id }}, 'approve')" class="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-50 text-indigo-600 hover:bg-indigo-100 dark:bg-indigo-900/30 dark:text-indigo-400 dark:hover:bg-indigo-900/50 transition-colors tooltip" title="Approve">
                                                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                                                         </button>
                                                         <button onclick="updateAppointmentStatus({{ $appointment->id }}, 'reject')" class="flex items-center justify-center w-8 h-8 rounded-full bg-red-50 text-red-600 hover:bg-red-100 dark:bg-red-900/30 dark:text-red-400 dark:hover:bg-red-900/50 transition-colors tooltip" title="Reject">
@@ -174,7 +174,7 @@
                                         </select>
                                     </div>
                                     <button type="submit"
-                                        class="w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl">
+                                        class="w-full py-3 bg-indigo-500 hover:bg-indigo-600 text-white font-bold rounded-xl">
                                         Add Availability
                                     </button>
                                 </form>
